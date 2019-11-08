@@ -51,5 +51,8 @@ public class Employee implements java.io.Serializable {
     public void setSalary(float salary) {
         this.salary = salary;
     }
+    public int abc(int a, int b, int c) {
+        return a + b + c;
+    }
     
 }

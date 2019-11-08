@@ -34,10 +34,11 @@ public class EmployeeBeanInfo extends SimpleBeanInfo {
     public MethodDescriptor[] getMethodDescriptors() {
         try {
             MethodDescriptor md1 = new MethodDescriptor(Employee.class.getMethod("getEmpId"));
-            MethodDescriptor md2 = new MethodDescriptor(Employee.class.getMethod("getName"));
+            MethodDescriptor md2 = new MethodDescriptor(Employee.class.getMethod("setName", String.class));
             MethodDescriptor md3 = new MethodDescriptor(Employee.class.getMethod("getAddress"));
-            MethodDescriptor md4 = new MethodDescriptor(Employee.class.getMethod("getSalary"));
-            return new MethodDescriptor[]{md1, md2, md3, md4};
+            MethodDescriptor md4 = new MethodDescriptor(Employee.class.getMethod("setSalary", float.class));
+            MethodDescriptor md5 = new MethodDescriptor(Employee.class.getMethod("abc", int.class, int.class, int.class));
+            return new MethodDescriptor[]{md1, md2, md3, md4, md5};
         } catch (NoSuchMethodException e) {
             Logger.getLogger(EmployeeBeanInfo.class.getName()).log(Level.SEVERE, null, e);
         }
